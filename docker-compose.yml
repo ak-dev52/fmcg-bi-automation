@@ -1,0 +1,10 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: fmcg_dwh
+    environment:
+      POSTGRES_USER: analyst
+      POSTGRES_PASSWORD: analyst_password
+      POSTGRES_DB: fmcg_analytics
+    ports:
+      - "5433:5432"
